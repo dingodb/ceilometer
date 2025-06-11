@@ -17,3 +17,12 @@ sources:
         - volume.size
         - volume.snapshot.size
         - volume.backup.size
+    - name: radosgw_pollsters
+      interval: 1200
+      meters:
+        -  radosgw.containers.objects
+        -  radosgw.containers.objects.size
+        -  radosgw.objects
+        -  radosgw.objects.size
+        -  radosgw.objects.containers
+        -  radosgw.usage
