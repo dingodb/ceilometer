@@ -20,6 +20,7 @@ from collections import namedtuple
 from requests_aws4auth import AWS4Auth
 import datetime
 import requests
+import json
 
 from urllib import parse as urlparse
 
