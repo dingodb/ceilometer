@@ -48,6 +48,8 @@ class VolumeSizePollster(_Base):
 
     def get_samples(self, manager, cache, resources):
         for volume in resources:
+            if volume.status == 'error':
+                continue
             yield sample.Sample(
                 name='volume.size',
                 type=sample.TYPE_GAUGE,
